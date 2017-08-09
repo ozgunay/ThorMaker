@@ -249,7 +249,7 @@ AC_DEFUN(
     [
         AC_LANG_PUSH([C++])
         CXXFLAGS_SAVE=$CXXFLAGS
-        CXXFLAGS+=" -std=c++11 -Werror ${BOOST_CPPFLAGS}"
+        CXXFLAGS+=" -std=c++11 ${BOOST_CPPFLAGS}"
 
         thor_boost_coroutine_versoin=no
 	AC_DEFINE([BOOST_COROUTINE_VERSION],[0],[])
