@@ -295,7 +295,7 @@ Error: Can not tell the type of the boost coroutine library.
               ],
               [
 	            AC_DEFINE_UNQUOTED([BOOST_COROUTINE_VERSION],[$thor_boost_coroutine_versoin],[Define which version of the boost co-routines we are using])
-                AC_SUBST(([BOOST_COROUTINE_VERSION], [$thor_boost_coroutine_versoin])
+                AC_SUBST([BOOST_COROUTINE_VERSION], [$thor_boost_coroutine_versoin])
               ]
         )
     ]
