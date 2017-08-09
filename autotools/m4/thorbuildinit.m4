@@ -252,7 +252,6 @@ AC_DEFUN(
         CXXFLAGS+=" -std=c++11 ${BOOST_CPPFLAGS}"
 
         thor_boost_coroutine_versoin=no
-	AC_DEFINE([BOOST_COROUTINE_VERSION],[0],[])
 	AC_MSG_NOTICE([Checking Boost CoRoutine Version])
         AC_COMPILE_IFELSE(
             [AC_LANG_SOURCE([[@%:@include <boost/coroutine/all.hpp>]])],
