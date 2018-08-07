@@ -339,7 +339,10 @@ try_install_head:		$(if (INSTALL_HEADER), install_head)
 install_app:		Note_Start_Installing_Applications $(INSTALL_APP)			Note_End_Installing_Applications
 install_shared_lib:	Note_Start_Installing_Libraries    $(INSTALL_SHARED_LIB)	Note_End_Installing_Libraries
 install_static_lib:	Note_Start_Installing_Libraries    $(INSTALL_STATIC_LIB)	Note_End_Installing_Libraries
-install_head:		Note_Start_Installing_Headers	   $(INSTALL_HEADER)		Note_End_Installing_Headers
+install_head:		Note_Start_Installing_Headers	CheckInstall   $(INSTALL_HEADER)		CheckInstall Note_End_Installing_Headers
+
+CheckInstall:
+	find ${PREFIX}/include
 
 Note_%:
 	@$(ECHO) $(call section_title, $(subst _, ,$*))
